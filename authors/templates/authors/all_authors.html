@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container container_main">
+
+    <p class="page_title">Коллекция авторов</p>
+
+   <table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Имя автора</th>
+            <th scope="col">Книги</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for author in authors %}
+
+        <tr>
+            <td>
+                <a class="link_custom" href="/authors/{{author.id}}">{{ author.name_rus }} </a>
+            </td>
+
+            {% for key, value in all_authors_books.items %}
+
+            {% if author.id == key  %}
+
+            <td>
+                {% for b in value %}
+
+                    <br>{{b}}
+
+                {% endfor %}
+
+                <p style="font-family: 'Lobster', cursive; font-size: 20px; font-weight:500; color:#07234f; margin-top:15px;">
+                Всего прочитанных книг: {{value.count}}
+                </p>
+            </td>
+
+            {% endif %}
+
+            {% endfor %}
+
+
+        </tr>
+        {% endfor %}
+
+    </tbody>
+    </table>
+</div>
+  {% endblock %}

@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container container_main">
+
+
+      <p class="title-article">{{ article.title }}</p>
+
+    <br><img src="/media/{{ article.image }}" class="picarticle">
+    <br>
+    <p class="one_article">{{article.text|safe }}</p>
+
+    <br>
+    <br>
+
+    <nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/home/">Главная</a></li>
+    <li class="breadcrumb-item"><a href="/home/articles/">Статьи</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Текущая статья</li>
+  </ol>
+</nav>
+
+</div>
+
+{% endblock %}

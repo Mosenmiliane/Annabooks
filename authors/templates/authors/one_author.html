@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container container_main">
+
+    <p class="book_author">{{author.name}} {{author.second_name}}</p>
+
+    <p class="name_rus">{{ author.name_rus }}</p>
+
+    <br>
+
+    <img src="/media/{{ author.photo }}" class="author_photo">
+
+    <br><p class="author_biography">{{ author.biography|safe }}</p>
+
+
+    <br>
+    <p style="font-family: 'Lobster', cursive; font-size: 25px; font-weight:600; color:#7b79a0; margin-top: 25px;">
+        Книги автора в каталоге:</p>
+    {% for b in books_author %}
+    <br> - {{b}}
+    {% endfor %}
+    <p style="font-family: 'Lobster', cursive; font-size: 20px; font-weight:600; color:#07234f; margin-top: 25px;">
+        Количество прочитанных книг: {{number}}
+    </p>
+
+    <nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/home/">Главная</a></li>
+    <li class="breadcrumb-item"><a href="/authors/">Авторы</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Текущая книга</li>
+  </ol>
+</nav>
+</div>
+
+{% endblock %}

@@ -1,0 +1,101 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<script>
+    $(document).ready(function(){
+    console.log('hello');
+    var rating = {{book.rating}};
+    console.log(rating)
+    var star = '<img src="/static/img/star.jpg" class="star">';
+    for(i=0;  i<rating; i++) {
+        $('#rating_div').append(star);
+     }
+     });
+
+</script>
+
+<div class="container container_main">
+
+    <p class="title">
+        <span class="book_title">{{book.original_title}}</span>
+        <br><span class="book_rus">{{ book.title }}</span>
+        <br><span class="book_author">{{ book.author}}</span>
+        <br><span class="book_year">{{book.year}}</span>
+    </p>
+
+    <br>
+    <div id="rating_div"></div>
+
+    <br><img src="/media/{{ book.image }}" class="book_img_big">
+
+    <br><p class="anna_review">{{ book.anna_review|safe }}</p>
+
+
+
+    <br> <p class="book_author"> Ваши отзывы:</p>
+
+    <div class="container_for_reviews">
+
+        {% for r in reviews %}
+
+        <div class="one_review">
+
+        <p class="r_title">{{r.title}}</p>
+        <p class="r_text">{{r.text|truncatewords:80 }}</p>
+
+<p>
+            <a id="mostradescr" class="btn btn-outline-info" data-toggle="modal" data-target="#full_review{{r.id}}" id="button_see_full_review" role="button">
+            Читать полностью
+            </a>
+</p>
+           <div class="modal fade" id="full_review{{r.id}}" tabindex="-1" role="dialog" aria-labelledby="full_reviewLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+               <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">{{r.title}}</h5>
+
+
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+                <div class="modal-body">
+                    <p>{{ r.text }}</p>
+                </div>
+              </div>
+
+                </div>
+            </div>
+
+        <p class="r_user"> Автор: {{r.user}}</p>
+        <p class="r_user">{{r.date}}</p>
+            </div>
+            {% endfor %}
+
+
+            <div class="r_form">
+                <form enctype="multipart/form-data" action=" " method="POST">
+                {% csrf_token %}
+
+                <br>{{ form.title }}
+                <br><br>{{ form.text }}
+
+                <br><br><button type="submit button" value="Submit" style="margin-top:15px; margin-bottom:15px;" class="btn btn-outline-info">Опубликовать отзыв</button>
+                </form>
+            </div>
+    </div>
+
+        <nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/home/">Главная</a></li>
+    <li class="breadcrumb-item"><a href="/books/">Каталог</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Текущая книга</li>
+  </ol>
+</nav>
+
+</div>
+
+
+
+{% endblock %}

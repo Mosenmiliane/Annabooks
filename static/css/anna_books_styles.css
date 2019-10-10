@@ -1,0 +1,335 @@
+body {
+
+background-image: url(/static/img/lilac2.jpg);
+background-size: 35%;
+background-attachment: fixed;
+background-repeat: no-repeat;
+
+}
+
+.container_main {
+
+background-color: white;
+background-size: 65%;
+margin-left: 24%;
+padding: 30px;
+min-height: 100vh;
+padding-top: 20px;
+padding-left: 20px;
+padding-right: 20px;
+
+}
+
+.container_navbar {
+background-color: #CDC4E8;
+margin-left: 24%;
+padding-left: 0px;
+padding-right: 0px;
+font-family: 'Lobster', cursive;
+font-size: 23px;
+
+}
+
+.handwriting_title {
+font-family: 'Great Vibes', cursive;
+color: #453188;
+font-size: 55px;
+padding-left: 15px;
+padding-right: 30px;
+
+}
+
+.link_custom {
+color: black;
+text-decoration: none;
+}
+
+.link_custom:hover {
+text-decoration: none;
+
+}
+
+.page_title {
+font-family: 'Lobster', cursive;
+font-size: 35px;
+color: #07234f;;
+margin: 20px;
+text-align: center;
+}
+
+.book_img_big {
+width: 350px;
+border: 5px #7b79a0 double;
+float: right;
+padding-left: 10px;
+padding-right: 10px;
+padding-bottom: 10px;
+padding-top: 10px;
+margin-right: 30px:
+margin-bottom: 30px;
+margin-left: 30px;
+
+}
+
+.book_title {
+font-family: 'Great Vibes', cursive;
+font-size: 55px;
+color: #07234f;
+padding-left: 15px;
+padding-right: 20px;
+
+}
+
+.book_rus {
+font-family: 'Lobster', cursive;
+font-size: 25px;
+color: #07234f;
+padding-left: 15px;
+padding-right: 20px;
+}
+
+.book_author {
+font-family: 'Lobster', cursive;
+font-size: 45px;
+color: #7b79a0;
+padding-left: 15px;
+padding-right: 20px;
+
+}
+
+.book_year {
+font-family: 'Lobster', cursive;
+font-size: 20px;
+color: #07234f;
+padding-left: 15px;
+padding-right: 20px;
+
+}
+
+.anna_review {
+text-align: justify;
+font-family: 'Georgia';
+font-size: 18px;
+text-indent: 10px;
+margin-right: 30px;
+margin-left: 30px;
+
+}
+
+.title {
+margin-top: 10px;
+margin-bottom: 10px;
+font-family; 'Great Vibes', cursive;
+
+}
+
+.rating {
+margin-bottom: 20px;
+}
+
+.star {
+width: 25px;
+margin-right: 5px;
+display: inline-block;
+}
+
+.container_for_reviews {
+height: auto;
+padding: 25px;
+background-color: white;
+}
+
+.one_review {
+height: 230px;
+border: 3px #90709A solid;
+padding: 15px;
+border-radius: 15px;
+background-color: #CFC2D3;
+overflow: hidden;
+margin-bottom: 15px;
+font-family: 'Georgia';
+}
+
+.r_title {
+color: #112d5a;
+font-size: 20px;
+font-weight: 570;
+}
+
+input {
+padding: 30px;
+}
+
+textarea {
+padding: 30px;
+}
+
+.hello {
+padding-top: 25px;
+padding-left: 100px;
+padding-right: 100px;
+text-align: justify;
+font-family: 'Georgia';
+font-size: 18px;
+
+}
+
+.image_article {
+width: 370px;
+padding-left: 7px;
+padding-right: 7px;
+padding-bottom: 7px;
+padding-top: 7px;
+
+}
+
+.card-title {
+font-family: 'Lobster', cursive;
+font-size: 25px;
+color: #07234f;
+}
+
+.card-text {
+font-family: 'Georgia';
+font-size: 16px;
+text-align: justify;
+text-indent: 10px;
+}
+
+.card {
+border: 3px #7b79a0 inset;
+padding: 7px;
+margin-left: 100px;
+margin-top: 50px;
+}
+
+.btn-info {
+font-family: 'Georgia';
+font-size: 16px;
+font-weight: bold;
+}
+
+
+.divider {
+margin: auto;
+width: 50%;
+}
+
+.articlepic {
+width: 350px;
+padding-right: 15px;
+}
+
+.articles {
+border: 3px #7b79a0 inset;
+padding: 20px;
+margin: 30px;
+text-align: justify;
+text-indent: 10px;
+font-family: 'Georgia';
+font-size: 16px;
+}
+
+.title-article {
+font-family: 'Lobster', cursive;
+font-size: 50px;
+color: #4F2982;
+margin-left: 60px;
+
+}
+
+.picarticle {
+width: 900px;
+margin-left: 60px;
+margin-bottom: 20px;
+
+}
+
+
+.one_article {
+font-family: 'Georgia';
+font-size: 18px;
+margin-left: 60px;
+margin-right: 60px;
+text-align: justify;
+text-indent: 10px;
+
+}
+
+.breadcrumb {
+font-size: 18px;
+font-family: 'Georgia';
+
+}
+
+.name_rus {
+font-family: 'Lobster', cursive;
+font-size: 25px;
+color: #07234f;
+padding-left: 15px;
+padding-right: 20px;
+}
+
+.author_photo {
+width: 550px;
+pading-bottom: 10px;
+padding-top: 10px;
+margin-left: 20px;
+margin-bottom: 30px;
+
+}
+
+
+@media (max-width: 500px) {
+
+.container_main {
+margin-left: 0px;
+}
+.container_navbar {
+margin-left: 0px;
+}
+
+.hello {
+padding-top: 10px;
+padding-left: 10px;
+padding-right: 10px;
+text-align: justify;
+font-family: 'Georgia';
+font-size: 14px;
+}
+
+.divider {
+margin-left: 0px;
+width: 30%;
+}
+
+.card {
+border: 3px #7b79a0 inset;
+padding: 2px;
+margin-left: 0px;
+margin-top: 20px;
+}
+
+.articlepic {
+
+position: absolute;
+width: 250px;
+padding-right: 5px;
+}
+.media-body {
+margin-top: 130px;
+font-size: 14px;
+}
+
+.title-article {
+font-size: 30px;
+margin-bottom: 10px;
+}
+
+.picarticle {
+width: 300px;
+margin-top: 5px;
+}
+.one_article {
+font-size: 14px;}
+}

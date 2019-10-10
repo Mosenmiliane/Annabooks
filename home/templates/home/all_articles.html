@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container container_main">
+
+    {% for article in articles %}
+
+    <div class="media articles">
+  <img src="/media/{{ article.image }}" class="articlepic" class="align-self-center mr-3" alt="picture">
+  <div class="media-body">
+    <h5 class="card-title">{{ article.title }}</h5>
+    <p>{{ article.text|truncatewords:60 }}</p>
+      <br><button type="button" class="btn btn-outline-info"><a href="/home/articles/{{ article.id }}">Читать полностью</a></button>
+  </div>
+
+</div>
+
+    {% endfor %}
+
+</div>
+{% endblock %}

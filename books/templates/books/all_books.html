@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+
+<script>
+$(document).ready(function(){
+    $("#book_search").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $(".table tr").filter(function() {
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+           });
+          });
+ });
+</script>
+
+
+<div class="container container_main">
+
+    <input style="margin-bottom:10px; height:20px; width:45%; background-color: #CFC2D3;" id="book_search" type="text" placeholder="Поиск книги">
+
+    <p class="page_title">Книжная коллекция</p>
+
+    <table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Название</th>
+      <th scope="col">Автор</th>
+      <th scope="col">Год</th>
+    </tr>
+  </thead>
+  <tbody>
+        {% for book in books %}
+
+   <tr>
+      <td><a class="link_custom" href="/books/{{ book.id }}">{{book.title}}</a></td>
+       <td>{{book.author}}</td>
+      <td>{{book.year}}</td>
+  </tr>
+        {% endfor %}
+
+  </tbody>
+</table>
+</div>
+
+{% endblock %}
