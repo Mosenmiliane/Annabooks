@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container container_main">
+
+    <table class="table table-striped">
+        <tbody>
+            {% for item in search_results %}
+
+            <tr>
+                {% if item.title %}
+                <td><a class="link_custom" href="/books/{{item.id}}">{{item.title}}</a></td>
+                {% elif item.name %}
+                    <td>{{item.name}} {{item.second_name}}</td>
+                {% endif %}
+
+                {% empty %}
+                К сожалению этой книги ещё нет в нашем каталоге. Дайте нам немного времени,
+                и она обязательно здесь появится!
+
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+{% endblock %}
+
+
+
+
+    </tbody>
+
+
+    </table>
+
+
+</div>

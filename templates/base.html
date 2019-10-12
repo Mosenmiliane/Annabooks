@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compaible" content="IE=edge">
+    <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="author" content="Anna">
+   <meta name="keywords" content="books, review, literature" />
+   <meta name="description" content="Anna World" />
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+   <link href="https://fonts.googleapis.com/css?family=Great+Vibes|Lobster&display=swap" rel="stylesheet">
+
+
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
+        crossorigin="anonymous">
+    </script>
+    <script
+        src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+        integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
+        crossorigin="anonymous">
+    </script>
+
+
+    {% block title %}
+    <title>
+        ANNA WORLD ANNA BOOKS
+    </title>
+    {% endblock %}
+
+    {% load static %}
+<link rel="stylesheet" href="{% static 'css/anna_books_styles.css' %}">
+
+</head>
+
+<body>
+
+<div class="container container_navbar">
+<nav class="navbar navbar-expand-lg">
+    <a class="navbar-brand" href="/"><span class="handwriting_title">Anna Books</span></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="/books/">Книги</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/authors/">Авторы</a>
+      </li>
+        <li class="nav-item">
+        <a class="nav-link" href="/home/articles/">Статьи</a>
+      </li>
+
+        <li class="nav-item">
+                    {% if request.user.is_authenticated %}
+                     <a class="nav-link" href="/books/logout"><i class="fas fa-sign-out-alt"></i>Log out</a>
+
+                    {% else %}
+                    <a class="nav-link" href="/books/login"><i class="fas fa-sign-in-alt"></i>Log in</a>
+                    {% endif %}
+
+
+       </li>
+     </ul>
+    <form autocomplete="off" class="form-inline my-2 my-lg-0" method="get" action="/search">
+      <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" name="q">
+      <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+</div>
+
+{% block content %}
+
+
+{% endblock %}
+
+
+<footer>
+
+</footer>
+</body>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+</html>
