@@ -25,7 +25,7 @@ SECRET_KEY = 'o9nd@d(n!ldlp5f27b_td(!3qd2qc^&w(o%9_&_ezimg@oq)58'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['128.199.35.102', 'localhost', 'annareadsbooks.com']
 
 
 # Application definition
