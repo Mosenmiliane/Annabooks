@@ -316,11 +316,11 @@ margin-top: 20px;
 }
 
 .articlepic {
-
 position: absolute;
 width: 250px;
 padding-right: 5px;
 }
+
 .media-body {
 margin-top: 130px;
 font-size: 14px;
@@ -344,6 +344,6 @@ width: 350px;
 pading-bottom: 10px;
 padding-top: 10px;
 margin-left: 20px;
-margin-bottom: 20px;
-}  
+margin-bottom: 20px;}
+  
 }
