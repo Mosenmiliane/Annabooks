@@ -335,6 +335,15 @@ margin-bottom: 10px;
 width: 300px;
 margin-top: 5px;
 }
+  
 .one_article {
 font-size: 14px;}
+
+.author_photo {
+width: 350px;
+pading-bottom: 10px;
+padding-top: 10px;
+margin-left: 20px;
+margin-bottom: 20px;
+}  
 }
