@@ -287,8 +287,13 @@ margin-left: 0px;
 }
 .container_navbar {
 margin-left: 0px;
+font-size: 20px;
 }
 
+.handwriting_title {
+font-size: 45px;
+}  
+  
 .hello {
 padding-top: 10px;
 padding-left: 10px;
