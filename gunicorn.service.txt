@@ -1,0 +1,12 @@
+[Unit]
+Description=gunicorn daemon
+After=network.target
+
+[Service]
+User=root
+Group=root
+WorkingDirectory=/var/www/Annabooks
+ExecStart=/anna_books_venv/bin/gunicorn --workers 3 --bind unix:/var/www/Annabooks.sock Annabooks.wsgi:application
+
+[Install]
+WantedBy=multi-user.target
